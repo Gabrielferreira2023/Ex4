@@ -1,16 +1,19 @@
 #include <stdio.h>
 
+int maximo(int num1, int num2);
+
 int main() {
-    int n, i;
-    
-    printf("Digite um número inteiro positivo: ");
-    scanf("%d", &n);
-    
-    printf("Números naturais de 0 até %d:\n", n);
-  
-    for (i = 0; i <= n; i++) {
-        printf("%d ", i);
-    }
-    
+    int a = 5;
+    int b = 10;
+    int maior = maximo(a, b);
+    printf("O maior número é: %d\n", maior);
     return 0;
+}
+
+int maximo(int num1, int num2) {
+    if (num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
 }
