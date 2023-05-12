@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &n);
+
+    printf("Numeros de 0 a %d em ordem decrescente:\n", n);
+  
+    for(int i = n; i >= 0; i--) {
+        printf("%d ", i);
+    }
+
+    return 0;
+}
