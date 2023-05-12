@@ -1,15 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    int n;
+void calculaMedia(float nota1, float nota2, float nota3){
+    float media = (nota1 + nota2 + nota3) / 3;
+    printf("Média: %.2f\n", media);
+}
 
-    printf("Digite um numero inteiro positivo: ");
-    scanf("%d", &n);
+int main(){
+    int numEstudantes;
+    printf("Informe o número de estudantes: ");
+    scanf("%d", &numEstudantes);
 
-    printf("Numeros de 0 a %d em ordem decrescente:\n", n);
-  
-    for(int i = n; i >= 0; i--) {
-        printf("%d ", i);
+    for(int i=1; i<=numEstudantes; i++){
+        float nota1, nota2, nota3;
+        printf("Informe as notas  %d: ", i);
+        scanf("%f %f %f", &nota1, &nota2, &nota3);
+
+        printf("Estudante %d - ", i);
+        calculaMedia(nota1, nota2, nota3);
     }
 
     return 0;
